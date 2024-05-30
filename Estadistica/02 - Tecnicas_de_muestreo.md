@@ -82,7 +82,7 @@ Por ejemplo, si $k=30$ y la primera unidad elegida es la $19$, las subsiguientes
 
 En este tipo de muestreo se divide a la población en subpoblaciones o estratos, pero en este **no se requiere** un representante de cada estrato en la muestra, puesto que en primer lugar se se elige una muestra de estratos, y en segundo, se selecciona una muestra de cada estrato para conformar la muestra deseada.
 
-```json
+```
 Población
  |
  --- [Estrato 1]
