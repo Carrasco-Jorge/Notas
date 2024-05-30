@@ -35,7 +35,7 @@ Esta distribución surge de un experimento del siguiente tipo:
 Una variable aleatoria discreta $X$ tiene distribución hipergeométrica $(N,M,K)$ si
 
 $$
-P(X=x|N,M,K)=\frac{\begin{pmatrix} M\\x \end{pmatrix}\begin{pmatrix} N-M\\K-x \end{pmatrix}}{\begin{pmatrix} N\\K \end{pmatrix}}, \quad x=0,1,\dots,K
+P(X=x|N,M,K)=\frac{\begin{pmatrix} M\\\ x \end{pmatrix}\begin{pmatrix} N-M\\\ K-x \end{pmatrix}}{\begin{pmatrix} N\\\ K \end{pmatrix}}, \quad x=0,1,\dots,K
 $$
 
 Así mismo, el rango completo de valores que puede tomar $x$ es
@@ -72,10 +72,14 @@ Donde comunmente el valor $0$ se considera como "fracaso" y el valor $1$ como é
 
 ### Distribución binomial
 
-Si una variable aleatoria discreta $X$ se define como el número de éxitos en una secuencia de tamaño $n$ de ensayos o experimentos **independientes** $Y_i$ ~ Bernoulli $(p)$, entonces $X=\sum_{i=1}^nY_i$ es una variable aleatoria Binomial $(n,p)$ y
+Si una variable aleatoria discreta $X$ se define como el número de éxitos en una secuencia de tamaño $n$ de ensayos o experimentos **independientes** $Y_i$ ~ Bernoulli $(p)$, entonces 
+
+$$X=\sum_{i=1}^nY_i$$
+
+es una variable aleatoria Binomial $(n,p)$ y
 
 $$
-P(X=x|n,p)=\begin{pmatrix} n\\ x \end{pmatrix}p^x(1-p)^{1-x},\quad x=0,1,2\dots,n
+P(X=x|n,p)=\begin{pmatrix} n\\\ x \end{pmatrix}p^x(1-p)^{1-x},\quad x=0,1,2\dots,n
 $$
 
 - **Media**: $np$
@@ -101,13 +105,13 @@ $$
 Si una variable aleatoria discreta $X$ se define como el número de ensayos o experimentos Bernoulli $(p)$ necesarios para obtener un número fijo $r$ de éxitos, entonces $X$ ~ BinomialNegativa $(r,p)$, donde
 
 $$
-P(X=x|r,p)=\begin{pmatrix} x-1\\ r-1 \end{pmatrix}p^r(1-p)^{x-r},\quad x=r,r+1,\dots
+P(X=x|r,p)=\begin{pmatrix} x-1\\\ r-1 \end{pmatrix}p^r(1-p)^{x-r},\quad x=r,r+1,\dots
 $$
 
 De forma alternativa, este tipo de variable aleatoria se define en términos del $Y=$ número de fracasos antes del $r$-ésimo éxtito. Esta formulación es estadísticamente equivalente a la previamente dada, ya que $Y=X-r$. De este modo
 
 $$
-P(Y=y|r,p)=(-1)^y\begin{pmatrix} -r\\ y \end{pmatrix}p^r(1-p)^y
+P(Y=y|r,p)=(-1)^y\begin{pmatrix} -r\\\ y \end{pmatrix}p^r(1-p)^y
 $$
 
 Esta distribución, así como la distribución [Poisson](#distribución-poisson), se puede utilizar para modelar fenómenos en los que se espera a que ocurran eventos. En este caso, se espera por un número específico de éxitos.
