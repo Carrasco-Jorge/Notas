@@ -27,3 +27,13 @@
 6. Finalizar la configuración
 
 7. Dar clic en aceptar
+
+## Dar nombre a una celda particular
+
+1. Seleccionar celda
+
+2. Ir justo debajo del menú de Excel y arriba de donde están las letras de las columnas, hasta la izquierda hay un recuadro donde dice el nombre de la celda, por ejemplo, `K12`
+
+3. Cambiar el nombre de , por ejemplo, `K12` al nombre que se quiera
+
+4. Dar enter

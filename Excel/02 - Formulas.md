@@ -1,5 +1,15 @@
 # Fórmulas en Excel (español e inglés)
 
+## Índice
+
+1. [Manipulación de textos](#manipulación-de-textos)
+
+2. [Buscar y coincidir datos](#buscar-y-coincidir-datos)
+
+3. [Cálculos y Estadística básica](#cálculos-y-estadística-básica)
+
+4. [Misceláneo](#misceláneo)
+
 ## Manipulación de textos
 
 ### ESPACIOS (TRIM)
@@ -89,6 +99,75 @@ Busca una coincidencia en un rango o una matriz y devuelve el elemento correspon
 | *Si_no_se_encuentra* | Valor devuelto si no se encuentra ninguna coincidencia |
 | *Modo_de_coincidencia* |Especifica cómo comparar el valor buscado con los valores de la matriz buscada. **0** = coincidencia exacta; si no se encuentra devolver #N/D.  **-1** = coincidencia exacta; si no se encuentra devolver siguiente elemento más pequeño. **1** = coincidencia exacta; si no se encuentra, devolver siguiente elemento más grande. **2** = coincidencia comodín donde **\***, **?** y **~** tienen significado especial |
 | *Modo_de_búsqueda* | **1** = realizar una búsqueda empezando por el primer elemento. *Valor predeterminado*. **-1** = realizar una búsqueda inversa empezando por el último elemento. **2** = realizar búsqueda binaria que se base en que *Matriz_buscada* se ordene en **orden ascendente**. Si no está ordenada, se devolverán resultados no válidos. **-2** = realizar búsqueda binaria que se base en que *Matriz_buscada* se ordene en **orden descendente**. Si no está ordenada, se devolverán resultados no válidos. |
+
+## Cálculos y Estadística básica
+
+### SUMA (SUM)
+
+La función SUMA suma valores. Puede sumar valores individuales, referencias o rangos de celda o una combinación de las tres.
+
+### SUMAR.SI (SUMIF)
+
+Suma las celdas que cumplen determinado criterio o condición.
+
+**Argumentos:**
+
+| Argumentos | Descripción |
+| ---------- | ----------- |
+| *Rango* | Rango de celdas para filtrar el rango de suma |
+| *Criterio* | Criterio para filtrar las celdas antes de la suma |
+| *Rango_suma* | Son las celdas que se van a sumar. Si se omite, se usan las celdas de *Rango* en la suma |
+
+### CONTAR (COUNT)
+
+Cuenta el número de celdas que contienen números en el rango indicado.
+
+### CONTAR.SI (COUNTIF)
+
+Cuenta el número de celdas que cumplen el criterio indicado.
+
+**Argumentos:**
+
+| Argumentos | Descripción |
+| ---------- | ----------- |
+| *Rango* | Rango o matriz de celdas a tomar en cuenta para el conteo |
+| *Criterio* | Criterio para filtrar las celdas antes del conteo |
+
+### PROMEDIO (AVERAGE)
+
+Devuelve el promedio o media artimética de los valores o rango indicados.
+
+### PROMEDIO.SI (AVERAGEIF)
+
+Devuelve el promedio o media artimética de los valores o rango indicados donde se cumpla el criterio indicado.
+
+**Argumentos:**
+
+| Argumentos | Descripción |
+| ---------- | ----------- |
+| *Rango* | Una o más celdas cuyo promedio se desea obtener que incluyan números, o nombres, matrices o referencias que contengan números |
+| *Criterio* | Criterio en forma de número, expresión, referencia de celda o texto que determina las celdas cuyo promedio se va a obtener. Por ejemplo, los criterios pueden expresarse como 32, "32", ">32", "manzanas" o B4 |
+| *Rango_promedio* | Conjunto real de celdas cuyo promedio se va a calcular. Si se omite, se utiliza un rango |
+
+### MEDIANA (MEDIAN)
+
+Devuelve la mediana de los valores o rango indicados.
+
+### MODA (MODE)
+
+Devuelve la moda de los valores o rango indicados.
+
+### DESVEST.M (STDEV.S)
+
+Devuelve la desviación estándar (fórmula para muestras) de los valores o rango indicados.
+
+### VAR.S (VAR.S)
+
+Devuelve la varianza (fórmula para muestras) de los valores o rango indicados.
+
+### COEF.DE.CORREL (CORREL)
+
+Devuelve el coeficiente de correlación **lineal** de los valores o rango indicados.
 
 ## Misceláneo
 
