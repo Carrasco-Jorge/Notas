@@ -6,17 +6,27 @@
 
 ## Métricas de negocio
 
-### P&L: Profit and Loss (ganancias y pérdidas)
+### P&L: Profit and Loss (ganancias y pérdidas brutas)
 
-Las ganancias o pérdidas se calculan realizando la resta
+Las ganancias o pérdidas brutas se calculan realizando la resta
 
 ```
-ingresos - gastos
+ingresos - presupuesto
+
+ingresos - costo
+
+revenue - budget
 
 revenue - expenses
 ```
 
-A veces se toma como gastos el presupuesto o `budget` si este representa el dinero total que se gastó.
+### Margen bruto / Margen de utilidad bruta (Gross profit margin)
+
+Métrica que muestra el porcentaje de ingresos que excede el costo de los objetos vendidos (Cost Of Goods Sold). Indica qué tan eficiente es una empresa al producir sus productos.
+
+$$
+\text{Gross Profit Margin}=\left( \frac{\text{Revenue}-\text{COGS}}{\text{Revenue}} \right)\times 100
+$$
 
 ### Valor de mercado (market value)
 
