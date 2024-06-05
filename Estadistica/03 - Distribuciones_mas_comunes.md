@@ -148,9 +148,18 @@ Para la media y la varianza que se muestran aquí, se toma en cuenta la variable
 
 ### Distribución uniforme
 
-- **Media**: 
+La distribución uniforme continua está definidaal distribuir la "masa" de manera uniforme en un intervalo $[a,b]$. Su función de densidad de probabilidad es
 
-- **Varianza**: 
+$$
+f(x|a,b)=\frac{1}{b-a},\quad x\in[a,b]
+$$
+$$
+f(x|a,b)=0,\quad x\notin [a,b]
+$$
+
+- **Media**: $\frac{b+a}{2}$
+
+- **Varianza**: $\frac{(b-a)^2}{12}$
 
 ### Distribución Gamma
 
