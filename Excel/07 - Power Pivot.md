@@ -61,3 +61,17 @@ Regresa los valores únicos o **"distinct"** de la columna especificada.
 ### SUMX
 
 Regresa la suma de una **expresión** evaluada para cada **fila** en una tabla.
+
+### CALCULATE
+
+Aplica **filtros** a la expresión indicada. La sintaxis de esta expresión es:
+
+```
+=CALCULATE(expression, filter1, filter2, ...)
+```
+
+Ejemplo:
+
+```
+=CALCULATE([Net Sales],dim_date[FY]=2019)
+```
