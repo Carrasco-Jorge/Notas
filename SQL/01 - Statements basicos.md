@@ -19,7 +19,9 @@ Selecciona y regresa las columnas indicadas (el símbolo `*` selecciona todas la
 ## WHERE
 
 ```sql
-SELECT * FROM nombrebd.tabla WHERE columna1="Tipo A"
+SELECT *
+FROM nombrebd.tabla
+WHERE columna1="Tipo A"
 ```
 
 La sentencia `WHERE` filtra los resultados del query `SELECT` con el filtro indicado (en el ejemplo: `columna1="Tipo A"`).
@@ -53,7 +55,9 @@ Regresa los valores únicos o distintos en la columna de la tabla indicada.
 ## LIKE y "Wild card search"
 
 ```sql
-SELECT * FROM nombrebd.tabla WHERE columna LIKE "formato";
+SELECT *
+FROM nombrebd.tabla
+WHERE columna LIKE "formato";
 ```
 
 Filtra las filas por columna y el formato indicado. El formato puede incluir el símbolo `%` antes y / o después de una cadena de texto para indicar que puede haber cualquier caracter antes o después de la cadena, respectivamente.
@@ -61,19 +65,25 @@ Filtra las filas por columna y el formato indicado. El formato puede incluir el 
 Ejemplos:
 
 ```sql
-SELECT * FROM peliculasbd.peliculas WHERE titulo LIKE "%mente%";
+SELECT *
+FROM peliculasbd.peliculas
+WHERE titulo LIKE "%mente%";
 ```
 
 Intensamente, La mente maestra, Mente: el misterio.
 
 ```sql
-SELECT * FROM peliculasbd.peliculas WHERE titulo LIKE "mente%";
+SELECT *
+FROM peliculasbd.peliculas
+WHERE titulo LIKE "mente%";
 ```
 
 Mente: el misterio.
 
 ```sql
-SELECT * FROM peliculasbd.peliculas WHERE titulo LIKE "%mente";
+SELECT *
+FROM peliculasbd.peliculas
+WHERE titulo LIKE "%mente";
 ```
 
 Intensamente.
@@ -81,7 +91,9 @@ Intensamente.
 ## AND
 
 ```sql
-SELECT * FROM nombrebd.tabla WHERE columna1>3 AND columna2="Tipo A";
+SELECT *
+FROM nombrebd.tabla
+WHERE columna1>3 AND columna2="Tipo A";
 ```
 
 Se usa para hacer un filtro con dos o más condiciones simultáneas que se deben cumplir al mismo tiempo.
@@ -89,7 +101,9 @@ Se usa para hacer un filtro con dos o más condiciones simultáneas que se deben
 ## BETWEEN
 
 ```sql
-SELECT * FROM nombrebd.tabla WHERE columna BETWEEN 6 AND 8;
+SELECT *
+FROM nombrebd.tabla
+WHERE columna BETWEEN 6 AND 8;
 ```
 
 Filtra los resultados que tengan un valor de `columna` entre 6 y 8 (inclusivo).
@@ -97,7 +111,9 @@ Filtra los resultados que tengan un valor de `columna` entre 6 y 8 (inclusivo).
 ## OR
 
 ```sql
-SELECT * FROM nombrebd.tabla WHERE columna1>3 or columna2="Bollywood";
+SELECT *
+FROM nombrebd.tabla
+WHERE columna1>3 or columna2="Bollywood";
 ```
 
 Se usa para hacer un filtro con dos o más condiciones simultáneas, donde solo debe cumplirse al menos una para seleccionar las filas o registros.
@@ -105,7 +121,9 @@ Se usa para hacer un filtro con dos o más condiciones simultáneas, donde solo 
 ## IN
 
 ```sql
-SELECT * FROM nombrebd.tabla WHERE columna IN(2016,2020,2024);
+SELECT *
+FROM nombrebd.tabla
+WHERE columna IN(2016,2020,2024);
 ```
 
 Filtra los resultados que tengan un valor contenido en el conjunto de valores indicado. Pueden ser valores numéricos o de texto.
@@ -113,7 +131,10 @@ Filtra los resultados que tengan un valor contenido en el conjunto de valores in
 ## ORDER BY
 
 ```sql
-SELECT * FROM nombrebd.tabla where columna1="Tipo A" ORDER BY columna2;
+SELECT *
+FROM nombrebd.tabla
+where columna1="Tipo A"
+ORDER BY columna2;
 ```
 
 Regresa los registros ordenados de forma ascendente por defecto usando la columna indicada. Se puede indicar `DESC` o `ASC` después de indicar la columna para ordenar de forma descendente o ascendente, respectivamente.
@@ -121,7 +142,11 @@ Regresa los registros ordenados de forma ascendente por defecto usando la column
 ## LIMIT
 
 ```sql
-SELECT * FROM nombrebd.tabla where columna1="Tipo A" ORDER BY columna2 DESC LIMIT 5;
+SELECT *
+FROM nombrebd.tabla
+where columna1="Tipo A"
+ORDER BY columna2 DESC
+LIMIT 5;
 ```
 
 Limita el número de registros mostrados al ejecutar la query.
@@ -129,7 +154,11 @@ Limita el número de registros mostrados al ejecutar la query.
 ## OFFSET
 
 ```sql
-SELECT * FROM nombrebd.tabla where columna1="Tipo A" ORDER BY columna2 DESC LIMIT 5 OFFSET 1;
+SELECT *
+FROM nombrebd.tabla
+where columna1="Tipo A"
+ORDER BY columna2 DESC
+LIMIT 5 OFFSET 1;
 ```
 
 Los registros mostrados inician desde el índice indicado después de la sentencia `OFFSET`. Los índices inician en `0`; es análogo a `df[offset:]` en python.
@@ -141,3 +170,14 @@ SELECT MAX(columna) AS max_columna FROM nombrebd.tabla;
 ```
 
 Se usa para nombrar o renombrar columnas en el resultado del query.
+
+## Having
+
+```sql
+SELECT columna1, COUNT(*) as nueva_columna
+FROM nombrebd.tabla
+GROUP BY columna1
+HAVING nueva_columna>2
+```
+
+La sentencia `HAVING` se utiliza para filtrar después de realizar operaciones como `GROUP BY`. Solo puede utilizars con columnas indicadas en la sentencia `SELECT`.
