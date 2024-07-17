@@ -181,3 +181,15 @@ HAVING nueva_columna>2
 ```
 
 La sentencia `HAVING` se utiliza para filtrar después de realizar operaciones como `GROUP BY`. Solo puede utilizars con columnas indicadas en la sentencia `SELECT`.
+
+## EXPLAIN ANALYZE
+
+Devuelve el orden de ejecución de una query y el tiempo de ejecución que tardó.
+
+```sql
+EXPLAIN ANALYZE
+SELECT columna1, COUNT(*) as nueva_columna
+FROM nombrebd.tabla
+GROUP BY columna1
+HAVING nueva_columna>2
+```
