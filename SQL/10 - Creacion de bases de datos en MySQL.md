@@ -32,45 +32,33 @@ File > New model > Add Diagram (doble clic)
 
 ## Características de columnas / features en MySQL
 
-### Primary key (PK)
+- Primary key (PK)
 
+- Not Null (NN)
 
+- Unique Index (UQ)
 
-### Not Null (NN)
+- Is Binary column (B)
 
+- Unsigned data type (UN)
 
+- Zero fill (ZF)
 
-### Unique Index (UQ)
+- Auto incremental (AI)
 
-
-
-### Is Binary column (B)
-
-
-
-### Unsigned data type (UN)
-
-
-
-### Zero fill (ZF)
-
-
-
-### Auto incremental (AI)
-
-
-
-### Generated column (G)
-
-
+- Generated column (G)
 
 ## Crear base de datos a partir de diagrama ERD (Forward engineer)
 
-
+```
+Abrir diagrama > Database > Forward Engineer
+```
 
 ## Crear diagrama ERD a partir de base de datos extistente (Reverse engineer)
 
-
+```
+Abrir conexión > Database > Reverse Engineer
+```
 
 ## Insertar datos en BD desde CSV
 
